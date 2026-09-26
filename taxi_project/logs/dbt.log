@@ -169,3 +169,413 @@ alter view "dev"."main"."stg_yellow_tripdata__dbt_tmp" rename to "stg_yellow_tri
 [0m10:41:12.128443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746f03e73fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746ef8b3f650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746f0313c710>]}
 [0m10:41:12.128825 [debug] [MainThread]: Flushing usage events
 [0m10:41:12.531698 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:48:32.820556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245a2ed1d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245a29a0a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245a277be60>]}
+
+
+============================== 10:48:32.823301 | fe5fdd9a-280d-47c8-83d2-2d80e1b6817a ==============================
+[0m10:48:32.823301 [info ] [MainThread]: Running with dbt=1.12.5
+[0m10:48:32.824198 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'version_check': 'True', 'empty': 'False', 'introspect': 'True', 'printer_width': '80', 'debug': 'False', 'partial_parse': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error': 'None', 'log_path': '/run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/logs', 'hints_enabled': 'True', 'log_format': 'default', 'profiles_dir': '/home/d4nd14z/.dbt'}
+[0m10:48:33.038376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fe5fdd9a-280d-47c8-83d2-2d80e1b6817a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245a1a5d8e0>]}
+[0m10:48:33.104129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fe5fdd9a-280d-47c8-83d2-2d80e1b6817a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72459dd5d790>]}
+[0m10:48:33.105781 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m10:48:33.190027 [debug] [MainThread]: checksum: f9e79cb9fecb6fce04e5fe541980172bada49fc34dffd57641f6b6357921ad81, vars: {}, profile: taxi_project, target: dev, version: 1.12.5
+[0m10:48:33.270591 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m10:48:33.271027 [debug] [MainThread]: Partial parsing: added file: taxi_project://models/staging/stg_yellow_tripdata_enriquecido.sql
+[0m10:48:33.580924 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.taxi_project.example
+[0m10:48:33.585142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fe5fdd9a-280d-47c8-83d2-2d80e1b6817a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245a19d4fe0>]}
+[0m10:48:33.671287 [debug] [MainThread]: Wrote artifact WritableManifest to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/manifest.json
+[0m10:48:33.673794 [debug] [MainThread]: Wrote artifact SemanticManifest to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/semantic_manifest.json
+[0m10:48:33.686110 [debug] [MainThread]: Wrote artifact OsiDocument to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/osi_document.json
+[0m10:48:33.692639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fe5fdd9a-280d-47c8-83d2-2d80e1b6817a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724599ba1430>]}
+[0m10:48:33.693106 [info ] [MainThread]: Found 2 models, 500 macros
+[0m10:48:33.693520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fe5fdd9a-280d-47c8-83d2-2d80e1b6817a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724599878e90>]}
+[0m10:48:33.695324 [info ] [MainThread]: 
+[0m10:48:33.695814 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:48:33.696239 [info ] [MainThread]: 
+[0m10:48:33.696900 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:48:33.702081 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m10:48:33.733569 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m10:48:33.733949 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m10:48:33.734613 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:48:33.749754 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m10:48:33.751209 [debug] [ThreadPool]: On list_dev: Close
+[0m10:48:33.751982 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m10:48:33.752475 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m10:48:33.764418 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m10:48:33.765044 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type != 'duckdb'
+    
+  
+[0m10:48:33.765521 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:48:33.767008 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m10:48:33.768681 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m10:48:33.769087 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m10:48:33.769974 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m10:48:33.770344 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m10:48:33.770724 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m10:48:33.771384 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:48:33.772302 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m10:48:33.772798 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m10:48:33.773106 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m10:48:33.773803 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:48:33.774130 [debug] [ThreadPool]: On create_dev_main: Close
+[0m10:48:33.775663 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m10:48:33.780500 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m10:48:33.781066 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m10:48:33.781456 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:48:33.782176 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m10:48:33.782521 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m10:48:33.782972 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m10:48:33.785793 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m10:48:33.787021 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m10:48:33.787621 [debug] [ThreadPool]: On list_dev_main: Close
+[0m10:48:33.788282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fe5fdd9a-280d-47c8-83d2-2d80e1b6817a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245997d3710>]}
+[0m10:48:33.788859 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:48:33.789162 [debug] [MainThread]: On master: BEGIN
+[0m10:48:33.789488 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:48:33.790143 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m10:48:33.790484 [debug] [MainThread]: On master: COMMIT
+[0m10:48:33.790777 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:48:33.791890 [debug] [MainThread]: On master: COMMIT
+[0m10:48:33.792400 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:48:33.792702 [debug] [MainThread]: On master: Close
+[0m10:48:33.795025 [debug] [Thread-1 (]: Began running node model.taxi_project.stg_yellow_tripdata
+[0m10:48:33.795777 [info ] [Thread-1 (]: 1 of 2 START sql view model main.stg_yellow_tripdata ........................... [RUN]
+[0m10:48:33.796311 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.taxi_project.stg_yellow_tripdata)
+[0m10:48:33.796734 [debug] [Thread-1 (]: Began compiling node model.taxi_project.stg_yellow_tripdata
+[0m10:48:33.802364 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxi_project.stg_yellow_tripdata"
+[0m10:48:33.802929 [debug] [Thread-1 (]: Began executing node model.taxi_project.stg_yellow_tripdata
+[0m10:48:33.829841 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxi_project.stg_yellow_tripdata"
+[0m10:48:33.830406 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata"
+[0m10:48:33.830755 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: BEGIN
+[0m10:48:33.831062 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:48:33.832009 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m10:48:33.832334 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata"
+[0m10:48:33.832827 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata"} */
+
+  
+  create view "dev"."main"."stg_yellow_tripdata__dbt_tmp" as (
+    SELECT *
+FROM read_parquet('data/yellow_tripdata_*.parquet', filename = true)
+  );
+
+[0m10:48:33.848766 [debug] [Thread-1 (]: DuckDB adapter: duckdb error: IO Error: No files found that match the pattern "data/yellow_tripdata_*.parquet"
+
+LINE 6: FROM read_parquet('data/yellow_tripdata_*.parquet', filename...
+             ^
+[0m10:48:33.849930 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata"} */
+
+  
+  create view "dev"."main"."stg_yellow_tripdata__dbt_tmp" as (
+    SELECT *
+FROM read_parquet('data/yellow_tripdata_*.parquet', filename = true)
+  );
+
+[0m10:48:33.850818 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m10:48:33.851707 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: ROLLBACK
+[0m10:48:33.853427 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: Close
+[0m10:48:33.864623 [debug] [Thread-1 (]: Runtime Error in model stg_yellow_tripdata (models/staging/stg_yellow_tripdata.sql)
+  IO Error: No files found that match the pattern "data/yellow_tripdata_*.parquet"
+  
+  LINE 6: FROM read_parquet('data/yellow_tripdata_*.parquet', filename...
+               ^
+[0m10:48:33.867334 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fe5fdd9a-280d-47c8-83d2-2d80e1b6817a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724592b9b9e0>]}
+[0m10:48:33.868221 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model main.stg_yellow_tripdata .................. [[31mERROR[0m in 0.07s]
+[0m10:48:33.869125 [debug] [Thread-1 (]: Finished running node model.taxi_project.stg_yellow_tripdata
+[0m10:48:33.869998 [debug] [Thread-4 (]: Marking all children of 'model.taxi_project.stg_yellow_tripdata' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_yellow_tripdata (models/staging/stg_yellow_tripdata.sql)
+  IO Error: No files found that match the pattern "data/yellow_tripdata_*.parquet"
+  
+  LINE 6: FROM read_parquet('data/yellow_tripdata_*.parquet', filename...
+               ^.
+[0m10:48:33.871787 [debug] [Thread-1 (]: Began running node model.taxi_project.stg_yellow_tripdata_enriquecido
+[0m10:48:33.872769 [info ] [Thread-1 (]: 2 of 2 SKIP relation main.stg_yellow_tripdata_enriquecido ...................... [[33mSKIP[0m]
+[0m10:48:33.873389 [debug] [Thread-1 (]: Finished running node model.taxi_project.stg_yellow_tripdata_enriquecido
+[0m10:48:33.874746 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:48:33.875172 [debug] [MainThread]: On master: BEGIN
+[0m10:48:33.875564 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:48:33.876362 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m10:48:33.876794 [debug] [MainThread]: On master: COMMIT
+[0m10:48:33.877187 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:48:33.877576 [debug] [MainThread]: On master: COMMIT
+[0m10:48:33.878170 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:48:33.878587 [debug] [MainThread]: On master: Close
+[0m10:48:33.879108 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:48:33.879499 [debug] [MainThread]: Connection 'model.taxi_project.stg_yellow_tripdata' was properly closed.
+[0m10:48:33.879955 [info ] [MainThread]: 
+[0m10:48:33.880393 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m10:48:33.881276 [debug] [MainThread]: Command end result
+[0m10:48:33.935500 [debug] [MainThread]: Wrote artifact WritableManifest to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/manifest.json
+[0m10:48:33.937909 [debug] [MainThread]: Wrote artifact SemanticManifest to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/semantic_manifest.json
+[0m10:48:33.940204 [debug] [MainThread]: Wrote artifact OsiDocument to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/osi_document.json
+[0m10:48:33.946734 [debug] [MainThread]: Wrote artifact RunExecutionResult to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/run_results.json
+[0m10:48:33.947044 [info ] [MainThread]: 
+[0m10:48:33.947478 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:48:33.947831 [info ] [MainThread]: 
+[0m10:48:33.948236 [error] [MainThread]: [[31mERROR[0m]: in model stg_yellow_tripdata (models/staging/stg_yellow_tripdata.sql)
+[0m10:48:33.948684 [error] [MainThread]:   Runtime Error in model stg_yellow_tripdata (models/staging/stg_yellow_tripdata.sql)
+  IO Error: No files found that match the pattern "data/yellow_tripdata_*.parquet"
+  
+  LINE 6: FROM read_parquet('data/yellow_tripdata_*.parquet', filename...
+               ^
+[0m10:48:33.949038 [info ] [MainThread]: 
+[0m10:48:33.949573 [info ] [MainThread]:   compiled code at target/compiled/taxi_project/models/staging/stg_yellow_tripdata.sql
+[0m10:48:33.950039 [info ] [MainThread]: 
+[0m10:48:33.950473 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 NO-OP=0 REUSED=0 TOTAL=2
+[0m10:48:33.951532 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.2148194, "process_in_blocks": "9352", "process_kernel_time": 0.176158, "process_mem_max_rss": "165964", "process_out_blocks": "3656", "process_user_time": 2.37314}
+[0m10:48:33.951998 [debug] [MainThread]: Command `dbt run` failed at 10:48:33.951898 after 1.22 seconds
+[0m10:48:33.952360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245a1ad9400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245997d2120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7245997d2330>]}
+[0m10:48:33.952825 [debug] [MainThread]: Flushing usage events
+[0m10:48:34.346907 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:49:18.413818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ac0f98e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ac1db2c60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ac1359340>]}
+
+
+============================== 10:49:18.417349 | 7f8ae005-4020-4cbe-8d5f-059b91554cbf ==============================
+[0m10:49:18.417349 [info ] [MainThread]: Running with dbt=1.12.5
+[0m10:49:18.417931 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'static_parser': 'True', 'target_path': 'None', 'hints_enabled': 'True', 'debug': 'False', 'profiles_dir': '/home/d4nd14z/.dbt', 'log_cache_events': 'False', 'fail_fast': 'False', 'introspect': 'True', 'maximum_seed_size_mib': '1', 'empty': 'False', 'write_json': 'True', 'log_path': '/run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/logs', 'no_print': 'None', 'log_format': 'default', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'printer_width': '80', 'warn_error': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m10:49:18.668008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7f8ae005-4020-4cbe-8d5f-059b91554cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ac0e9dfa0>]}
+[0m10:49:18.753943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7f8ae005-4020-4cbe-8d5f-059b91554cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ab91b7b90>]}
+[0m10:49:18.756536 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m10:49:18.863684 [debug] [MainThread]: checksum: f9e79cb9fecb6fce04e5fe541980172bada49fc34dffd57641f6b6357921ad81, vars: {}, profile: taxi_project, target: dev, version: 1.12.5
+[0m10:49:18.966630 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:49:18.967129 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:49:18.967450 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:49:18.975781 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.taxi_project.example
+[0m10:49:18.981048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7f8ae005-4020-4cbe-8d5f-059b91554cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ac1033bf0>]}
+[0m10:49:19.102335 [debug] [MainThread]: Wrote artifact WritableManifest to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/manifest.json
+[0m10:49:19.105044 [debug] [MainThread]: Wrote artifact SemanticManifest to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/semantic_manifest.json
+[0m10:49:19.119933 [debug] [MainThread]: Wrote artifact OsiDocument to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/osi_document.json
+[0m10:49:19.128083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7f8ae005-4020-4cbe-8d5f-059b91554cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ab8e6b4d0>]}
+[0m10:49:19.128595 [info ] [MainThread]: Found 2 models, 500 macros
+[0m10:49:19.129074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f8ae005-4020-4cbe-8d5f-059b91554cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ab8cc1b50>]}
+[0m10:49:19.131434 [info ] [MainThread]: 
+[0m10:49:19.131950 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:49:19.132307 [info ] [MainThread]: 
+[0m10:49:19.133350 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:49:19.140017 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m10:49:19.177669 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m10:49:19.178131 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m10:49:19.178473 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:19.194443 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m10:49:19.195942 [debug] [ThreadPool]: On list_dev: Close
+[0m10:49:19.196744 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m10:49:19.197274 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m10:49:19.206698 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m10:49:19.207169 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type != 'duckdb'
+    
+  
+[0m10:49:19.207535 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:49:19.209031 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m10:49:19.210441 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m10:49:19.210838 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m10:49:19.211513 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:49:19.211933 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m10:49:19.212237 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m10:49:19.213079 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:49:19.214075 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m10:49:19.214448 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m10:49:19.214836 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m10:49:19.215458 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m10:49:19.215878 [debug] [ThreadPool]: On create_dev_main: Close
+[0m10:49:19.217409 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m10:49:19.222641 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m10:49:19.223221 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m10:49:19.223567 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:49:19.224357 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m10:49:19.224731 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m10:49:19.225239 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m10:49:19.228399 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m10:49:19.229929 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m10:49:19.230597 [debug] [ThreadPool]: On list_dev_main: Close
+[0m10:49:19.231605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f8ae005-4020-4cbe-8d5f-059b91554cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ab803f470>]}
+[0m10:49:19.232539 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:49:19.232857 [debug] [MainThread]: On master: BEGIN
+[0m10:49:19.233180 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:49:19.234134 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m10:49:19.234538 [debug] [MainThread]: On master: COMMIT
+[0m10:49:19.234840 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:49:19.235123 [debug] [MainThread]: On master: COMMIT
+[0m10:49:19.235674 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:49:19.235981 [debug] [MainThread]: On master: Close
+[0m10:49:19.238238 [debug] [Thread-1 (]: Began running node model.taxi_project.stg_yellow_tripdata
+[0m10:49:19.238800 [info ] [Thread-1 (]: 1 of 2 START sql view model main.stg_yellow_tripdata ........................... [RUN]
+[0m10:49:19.239259 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.taxi_project.stg_yellow_tripdata)
+[0m10:49:19.285032 [debug] [Thread-1 (]: Began compiling node model.taxi_project.stg_yellow_tripdata
+[0m10:49:19.289733 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxi_project.stg_yellow_tripdata"
+[0m10:49:19.290168 [debug] [Thread-1 (]: Began executing node model.taxi_project.stg_yellow_tripdata
+[0m10:49:19.316534 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxi_project.stg_yellow_tripdata"
+[0m10:49:19.317079 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata"
+[0m10:49:19.317421 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: BEGIN
+[0m10:49:19.317736 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:49:19.318471 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m10:49:19.318804 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata"
+[0m10:49:19.319129 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata"} */
+
+  
+  create view "dev"."main"."stg_yellow_tripdata__dbt_tmp" as (
+    SELECT *
+FROM read_parquet('data/yellow_tripdata_*.parquet', filename = true)
+  );
+
+[0m10:49:19.320456 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m10:49:19.325493 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata"
+[0m10:49:19.325855 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata"} */
+alter view "dev"."main"."stg_yellow_tripdata" rename to "stg_yellow_tripdata__dbt_backup"
+[0m10:49:19.326669 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m10:49:19.328604 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata"
+[0m10:49:19.328939 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata"} */
+alter view "dev"."main"."stg_yellow_tripdata__dbt_tmp" rename to "stg_yellow_tripdata"
+[0m10:49:19.329615 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m10:49:19.341940 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: COMMIT
+[0m10:49:19.342320 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata"
+[0m10:49:19.342680 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: COMMIT
+[0m10:49:19.351443 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m10:49:19.356750 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata"
+[0m10:49:19.357233 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata"} */
+
+      drop view if exists "dev"."main"."stg_yellow_tripdata__dbt_backup" cascade
+    
+[0m10:49:19.360456 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m10:49:19.362979 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata: Close
+[0m10:49:19.364578 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7f8ae005-4020-4cbe-8d5f-059b91554cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ac0f37bc0>]}
+[0m10:49:19.365161 [info ] [Thread-1 (]: 1 of 2 OK created sql view model main.stg_yellow_tripdata ...................... [[32mOK[0m in 0.12s]
+[0m10:49:19.365939 [debug] [Thread-1 (]: Finished running node model.taxi_project.stg_yellow_tripdata
+[0m10:49:19.366804 [debug] [Thread-1 (]: Began running node model.taxi_project.stg_yellow_tripdata_enriquecido
+[0m10:49:19.367619 [info ] [Thread-1 (]: 2 of 2 START sql view model main.stg_yellow_tripdata_enriquecido ............... [RUN]
+[0m10:49:19.368533 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxi_project.stg_yellow_tripdata, now model.taxi_project.stg_yellow_tripdata_enriquecido)
+[0m10:49:19.368877 [debug] [Thread-1 (]: Began compiling node model.taxi_project.stg_yellow_tripdata_enriquecido
+[0m10:49:19.371127 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxi_project.stg_yellow_tripdata_enriquecido"
+[0m10:49:19.371764 [debug] [Thread-1 (]: Began executing node model.taxi_project.stg_yellow_tripdata_enriquecido
+[0m10:49:19.375192 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxi_project.stg_yellow_tripdata_enriquecido"
+[0m10:49:19.375851 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata_enriquecido"
+[0m10:49:19.376252 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata_enriquecido: BEGIN
+[0m10:49:19.376671 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:49:19.377532 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m10:49:19.377883 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata_enriquecido"
+[0m10:49:19.378214 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata_enriquecido: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata_enriquecido"} */
+
+  
+  create view "dev"."main"."stg_yellow_tripdata_enriquecido__dbt_tmp" as (
+    SELECT
+    *,
+    extract(year FROM tpep_pickup_datetime) AS anio,
+    extract(month FROM tpep_pickup_datetime) AS mes
+FROM "dev"."main"."stg_yellow_tripdata"
+  );
+
+[0m10:49:19.379990 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m10:49:19.382895 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata_enriquecido"
+[0m10:49:19.383298 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata_enriquecido: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata_enriquecido"} */
+alter view "dev"."main"."stg_yellow_tripdata_enriquecido__dbt_tmp" rename to "stg_yellow_tripdata_enriquecido"
+[0m10:49:19.384434 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m10:49:19.386297 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata_enriquecido: COMMIT
+[0m10:49:19.386759 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata_enriquecido"
+[0m10:49:19.387092 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata_enriquecido: COMMIT
+[0m10:49:19.389565 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m10:49:19.391703 [debug] [Thread-1 (]: Using duckdb connection "model.taxi_project.stg_yellow_tripdata_enriquecido"
+[0m10:49:19.392067 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata_enriquecido: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "taxi_project", "target_name": "dev", "node_id": "model.taxi_project.stg_yellow_tripdata_enriquecido"} */
+
+      drop view if exists "dev"."main"."stg_yellow_tripdata_enriquecido__dbt_backup" cascade
+    
+[0m10:49:19.394128 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m10:49:19.395717 [debug] [Thread-1 (]: On model.taxi_project.stg_yellow_tripdata_enriquecido: Close
+[0m10:49:19.396310 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7f8ae005-4020-4cbe-8d5f-059b91554cbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ab80befc0>]}
+[0m10:49:19.397109 [info ] [Thread-1 (]: 2 of 2 OK created sql view model main.stg_yellow_tripdata_enriquecido .......... [[32mOK[0m in 0.03s]
+[0m10:49:19.397852 [debug] [Thread-1 (]: Finished running node model.taxi_project.stg_yellow_tripdata_enriquecido
+[0m10:49:19.399295 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:49:19.399770 [debug] [MainThread]: On master: BEGIN
+[0m10:49:19.400058 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:49:19.400789 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m10:49:19.401098 [debug] [MainThread]: On master: COMMIT
+[0m10:49:19.401428 [debug] [MainThread]: Using duckdb connection "master"
+[0m10:49:19.401728 [debug] [MainThread]: On master: COMMIT
+[0m10:49:19.402253 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m10:49:19.402624 [debug] [MainThread]: On master: Close
+[0m10:49:19.403089 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:49:19.403367 [debug] [MainThread]: Connection 'model.taxi_project.stg_yellow_tripdata_enriquecido' was properly closed.
+[0m10:49:19.403773 [info ] [MainThread]: 
+[0m10:49:19.404124 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.27 seconds (0.27s).
+[0m10:49:19.404971 [debug] [MainThread]: Command end result
+[0m10:49:19.455118 [debug] [MainThread]: Wrote artifact WritableManifest to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/manifest.json
+[0m10:49:19.457752 [debug] [MainThread]: Wrote artifact SemanticManifest to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/semantic_manifest.json
+[0m10:49:19.460105 [debug] [MainThread]: Wrote artifact OsiDocument to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/osi_document.json
+[0m10:49:19.466973 [debug] [MainThread]: Wrote artifact RunExecutionResult to /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/target/run_results.json
+[0m10:49:19.467295 [info ] [MainThread]: 
+[0m10:49:19.467756 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:49:19.468192 [info ] [MainThread]: 
+[0m10:49:19.468728 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m10:49:19.469893 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.134828, "process_in_blocks": "1200", "process_kernel_time": 0.185161, "process_mem_max_rss": "161132", "process_out_blocks": "2608", "process_user_time": 2.290625}
+[0m10:49:19.470411 [debug] [MainThread]: Command `dbt run` succeeded at 10:49:19.470275 after 1.14 seconds
+[0m10:49:19.470822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ac26330e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ac22521b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792ab8e506e0>]}
+[0m10:49:19.471340 [debug] [MainThread]: Flushing usage events
+[0m10:49:19.876593 [debug] [MainThread]: An error was encountered while trying to flush usage events

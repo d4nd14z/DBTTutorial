@@ -1,1 +1,1 @@
-{"_invocation_id": "be3f15a8-5d7e-40e4-b9c6-70274228afd2", "linked": {"0": {"name": "model.taxi_project.stg_yellow_tripdata", "type": "model"}}}
+{"_invocation_id": "7f8ae005-4020-4cbe-8d5f-059b91554cbf", "linked": {"0": {"name": "model.taxi_project.stg_yellow_tripdata", "type": "model", "succ": [1]}, "1": {"name": "model.taxi_project.stg_yellow_tripdata_enriquecido", "type": "model"}}}
