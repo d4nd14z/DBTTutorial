@@ -1,0 +1,73 @@
+[0m10:37:47.176577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a2f7753680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a2f7a13410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a2f6dbe6f0>]}
+
+
+============================== 10:37:47.179400 | cd590162-5578-4778-b4ac-15bf6586eb46 ==============================
+[0m10:37:47.179400 [info ] [MainThread]: Running with dbt=1.12.5
+[0m10:37:47.179966 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'profiles_dir': '/home/d4nd14z/.dbt', 'log_format': 'default', 'indirect_selection': 'eager', 'invocation_command': 'dbt init taxi_project', 'write_json': 'True', 'quiet': 'False', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'debug': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'empty': 'None', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'no_print': 'None', 'printer_width': '80', 'warn_error': 'None', 'hints_enabled': 'True', 'target_path': 'None', 'cache_selected_only': 'False'}
+[0m10:37:47.208529 [debug] [MainThread]: Starter project path: /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m10:37:47.213149 [info ] [MainThread]: Setting up your profile.
+[0m10:38:01.568156 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m10:38:01.568759 [info ] [MainThread]: dbt version: 1.12.5
+[0m10:38:01.569081 [info ] [MainThread]: python version: 3.12.14
+[0m10:38:01.569500 [info ] [MainThread]: python path: /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/.venv/bin/python3.12
+[0m10:38:01.569902 [info ] [MainThread]: os info: Linux-7.0.0-34-generic-x86_64-desconocido-with-glibc2.43
+[0m10:38:01.623406 [info ] [MainThread]: Using profiles dir at /home/d4nd14z/.dbt
+[0m10:38:01.623885 [info ] [MainThread]: Using profiles.yml file at /home/d4nd14z/.dbt/profiles.yml
+[0m10:38:01.624230 [info ] [MainThread]: Using dbt_project.yml file at /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/dbt_project.yml
+[0m10:38:01.628024 [info ] [MainThread]: adapter type: duckdb
+[0m10:38:01.628485 [info ] [MainThread]: adapter version: 1.11.0
+[0m10:38:01.751294 [info ] [MainThread]: Configuration:
+[0m10:38:01.751789 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:38:01.752127 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m10:38:01.752514 [info ] [MainThread]: Required dependencies:
+[0m10:38:01.752865 [debug] [MainThread]: Executing "git --help"
+[0m10:38:01.759487 [debug] [MainThread]: STDOUT: "b"uso: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nEstos son comandos comunes de Git usados en varias situaciones:\n\ncomenzar un \xc3\xa1rea de trabajo (mira tambi\xc3\xa9n: git help tutorial)\n   clone      Clonar un repositorio dentro de un nuevo directorio\n   init       Crear un repositorio de Git vac\xc3\xado o reinicia el que ya existe\n\ntrabajar en los cambios actuales (mira tambi\xc3\xa9n: git help everyday)\n   add        Agregar contenido de archivos al \xc3\xadndice\n   mv         Mover o cambiar el nombre a archivos, directorios o enlaces simb\xc3\xb3licos\n   restore    Restaurar archivos del \xc3\xa1rbol de trabajo\n   rm         Borrar archivos del \xc3\xa1rbol de trabajo y del \xc3\xadndice\n\nexaminar el historial y el estado (mira tambi\xc3\xa9n: git help revisions)\n   bisect     Usar la b\xc3\xbasqueda binaria para encontrar el commit que introdujo el bug\n   diff       Mostrar los cambios entre commits, commit y \xc3\xa1rbol de trabajo, etc\n   grep       Imprimir las l\xc3\xadneas que concuerden con el patr\xc3\xb3n\n   log        Mostrar los logs de los commits\n   show       Mostrar varios tipos de objetos\n   status     Mostrar el estado del \xc3\xa1rbol de trabajo\n\ncrecer, marcar y ajustar tu historial com\xc3\xban\n   backfill   Download missing objects in a partial clone\n   branch     Listar, crear, o borrar ramas\n   commit     Grabar los cambios al repositorio\n   merge      Juntar dos o m\xc3\xa1s historiales de desarrollo juntos\n   rebase     Volver a aplicar commits en la punta de otra rama\n   reset      Set `HEAD` or the index to a known state\n   switch     Cambiar de branch\n   tag        Create, list, delete or verify tags\n\ncolaborar (mira tambi\xc3\xa9n: git help workflows)\n   fetch      Descargar objetos y referencias de otro repositorio\n   pull       Realizar un fetch e integra con otro repositorio o rama local\n   push       Actualizar referencias remotas junto con sus objetos asociados\n\n'git help -a' y 'git help -g' listan los subcomandos disponibles y algunas\ngu\xc3\xadas de concepto. Consulta 'git help <command>' o 'git help <concepto>'\npara leer sobre un subcomando o concepto espec\xc3\xadfico.\nMira 'git help git' para una vista general del sistema.\n""
+[0m10:38:01.760314 [debug] [MainThread]: STDERR: "b''"
+[0m10:38:01.760678 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:38:01.761041 [info ] [MainThread]: Connection:
+[0m10:38:01.761425 [info ] [MainThread]:   database: dev
+[0m10:38:01.761791 [info ] [MainThread]:   schema: main
+[0m10:38:01.762132 [info ] [MainThread]:   path: dev.duckdb
+[0m10:38:01.762509 [info ] [MainThread]:   config_options: None
+[0m10:38:01.762933 [info ] [MainThread]:   extensions: None
+[0m10:38:01.763274 [info ] [MainThread]:   settings: {}
+[0m10:38:01.763693 [info ] [MainThread]:   external_root: .
+[0m10:38:01.764033 [info ] [MainThread]:   use_credential_provider: None
+[0m10:38:01.764399 [info ] [MainThread]:   attach: None
+[0m10:38:01.764828 [info ] [MainThread]:   filesystems: None
+[0m10:38:01.765169 [info ] [MainThread]:   remote: None
+[0m10:38:01.765550 [info ] [MainThread]:   plugins: None
+[0m10:38:01.765889 [info ] [MainThread]:   disable_transactions: False
+[0m10:38:01.766349 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m10:38:01.845940 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m10:38:01.902463 [debug] [MainThread]: Using duckdb connection "debug"
+[0m10:38:01.903266 [debug] [MainThread]: On debug: select 1 as id
+[0m10:38:01.904060 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:38:01.935485 [debug] [MainThread]: SQL status: OK in 0.031 seconds
+[0m10:38:01.936647 [debug] [MainThread]: On debug: Close
+[0m10:38:01.937000 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:38:01.937338 [info ] [MainThread]: [32mAll checks passed![0m
+[0m10:38:01.937766 [info ] [MainThread]: Your new dbt project "taxi_project" was created!
+Initialized new project in /run/media/d4nd14z/Desarrollo/Data Analytics/TLC Trip Record Data/taxi_project/taxi_project
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:38:01.938645 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 14.846466, "process_in_blocks": "108680", "process_kernel_time": 0.181205, "process_mem_max_rss": "151092", "process_out_blocks": "1376", "process_user_time": 1.834075}
+[0m10:38:01.939115 [debug] [MainThread]: Command `dbt init` succeeded at 10:38:01.938993 after 14.85 seconds
+[0m10:38:01.940410 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:38:01.940815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a2eed79af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a2f6b43ce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71a2f8da57f0>]}
+[0m10:38:01.941210 [debug] [MainThread]: Flushing usage events
+[0m10:38:02.317167 [debug] [MainThread]: An error was encountered while trying to flush usage events

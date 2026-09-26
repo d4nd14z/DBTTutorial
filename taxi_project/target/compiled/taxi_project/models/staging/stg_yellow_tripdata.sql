@@ -1,1 +1,2 @@
-SELECT * FROM read_parquet("data/yellow_tripdata_*.parquet", filename=true)
+SELECT *
+FROM read_parquet('data/yellow_tripdata_*.parquet', filename = true)
